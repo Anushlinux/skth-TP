@@ -1,4 +1,4 @@
-// script.js
+
 document.addEventListener("DOMContentLoaded", () => {
   const gridContainer = document.querySelector(".graph-grid");
   const gridSlider = document.getElementById("slide-bitch");
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const rainbowButton = document.querySelector(".rainbow");
 
   function createGrid(gridSize) {
-    gridContainer.innerHTML = ""; // Clear the existing grid
+    gridContainer.innerHTML = ""; 
 
     gridContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
     gridContainer.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
@@ -86,11 +86,8 @@ document.addEventListener("DOMContentLoaded", () => {
     return luminance > 0.5 ? "#000" : "#FFF";
   }
 
-
-  // Initialize the grid
   createGrid(gridSlider.value);
-
-  // Update the grid when the slider value changes
+  
   gridSlider.addEventListener("input", () => {
     createGrid(gridSlider.value);
   });
